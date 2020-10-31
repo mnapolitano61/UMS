@@ -1,0 +1,15 @@
+th, td{
+  padding: 5px;
+  border: 1px white;
+}
+
+th {
+  background-color: black;
+  color: #e56cff;
+}
+
+td{
+  background-color: silver
+}
+
+
