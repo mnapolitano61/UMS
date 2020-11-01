@@ -1,11 +1,13 @@
-<div class="main">
+<div class="container-fluid">
   <h1> User Managment System</h1>
   <button type="button" (click)="newUser()">Crea Utente</button>
-  <div class="users">
-    <app-users (updateUser)="updateUser($event)"></app-users>
-  </div>
-  <div class="userDetail" *ngIf="showForm">
-    <app-user-detail [user]="userSelected"></app-user-detail>
+  <div class="row">
+    <div class="col-md-8">
+      <app-users (updateUser)="updateUser($event)"></app-users>
+    </div>
+    <div class="col-md-4" *ngIf="showForm">
+      <app-user-detail [user]="userSelected"></app-user-detail>
+    </div>
   </div>
 </div>
 
