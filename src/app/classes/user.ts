@@ -1,9 +1,9 @@
 import {UserInterface} from '../interfaces/user';
 
-export class User implements UserInterface{
-  userId: number;
+export class User implements UserInterface {
+  id: number;
   name: string;
-  surname: string;
+  lastname: string;
   email: string;
   fiscalcode: string;
   province: string;
@@ -11,9 +11,8 @@ export class User implements UserInterface{
   age: number;
 
   constructor() {
-    this.userId = 0;
+    this.id = 0;
     this.name = '';
-    this.surname = '';
     this.email = '';
     this.fiscalcode = '';
     this.province = '';

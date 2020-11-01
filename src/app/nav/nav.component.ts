@@ -6,13 +6,15 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  @Output() onNewuser = new EventEmitter();
-  constructor() { }
+  @Output() onNewUser = new EventEmitter();
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   newUser() {
-    this.onNewuser.emit();
+    this.onNewUser.emit();
   }
 }

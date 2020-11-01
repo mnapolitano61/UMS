@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {User} from '../classes/user';
 import {UserService} from '../services/user.service';
 
@@ -8,15 +8,16 @@ import {UserService} from '../services/user.service';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
-  private userCopy: User;
-  private _user: User;
+  private usercopy;
+  private __user
+
   @Input() set user(user: User) {
-    this._user = user;
-    this.userCopy = Object.assign({}, user);
+    this.__user = user;
+    this.usercopy = Object.assign({}, user);
   }
 
   get user() {
-    return this._user;
+    return this.__user;
   }
 
   constructor(private userService: UserService) {
@@ -26,19 +27,20 @@ export class UserDetailComponent implements OnInit {
   }
 
   saveUser() {
-    if (this.user.userId > 0) {
+    if (this.user.id > 0) {
       this.userService.updateUser(this.user);
     } else {
       this.userService.createUser(this.user);
     }
   }
 
-  resetForm() {
-    if (this.user.userId === 0) {
+  resetForm(form) {
+
+    if (this.user.id === 0) {
       this.user = new User();
     } else {
-      this.user = this.userCopy;
+      this.user = this.usercopy;
     }
-  }
 
+  }
 }

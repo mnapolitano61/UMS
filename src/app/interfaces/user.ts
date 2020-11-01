@@ -1,7 +1,7 @@
 export interface UserInterface {
-  userId: number;
+  id: number;
   name: string;
-  surname: string;
+  lastname: string;
   email: string;
   fiscalcode: string;
   province: string;
