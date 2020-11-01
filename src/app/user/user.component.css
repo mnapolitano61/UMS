@@ -6,11 +6,16 @@ td{
 
 button {
   padding: 5px;
-  border: 1px solid darkred;
+  border: 1px solid;
   border-radius: 5px;
 }
 
 button.delete {
   background-color: darkred;
   color: white;
+}
+
+button.update {
+  background-color: #ffe107;
+  color: black;
 }

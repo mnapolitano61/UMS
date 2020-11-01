@@ -53,4 +53,11 @@ export class UserService{
       this.users.splice(index, 1);
     }
   }
+
+  updateUser(user){
+    const index = this.users.indexOf(user);
+    if(index >= 0){
+      this.users.splice(index, 1);
+    }
+  }
 }

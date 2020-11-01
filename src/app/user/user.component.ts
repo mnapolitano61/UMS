@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {UserService} from './user.service';
+import {UserService} from '../services/user.service';
 import {User} from '../interfaces/user';
 
 @Component({
@@ -11,6 +11,7 @@ export class UserComponent implements OnInit {
 
   @Input('user-data') user: User;
   @Output('onDeleteUser') userDeleted = new EventEmitter();
+  @Output('onSelectUser') userSelected = new EventEmitter();
   constructor(private userService: UserService) { }
 
   ngOnInit() {
@@ -18,6 +19,10 @@ export class UserComponent implements OnInit {
 
   deleteUser() {
     this.userDeleted.emit(this.user);
+    //this.userService.deleteUser(user);
+  }
+  updateUser() {
+    this.userSelected.emit(this.user);
     //this.userService.deleteUser(user);
   }
 }
