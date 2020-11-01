@@ -1,11 +1,12 @@
 import {Injectable} from '@angular/core';
-import {User} from '../interfaces/user';
+import {UserInterface} from '../interfaces/user';
+import {User} from '../classes/user';
 
 @Injectable()
 export class UserService{
   users: Array<User> = [
     {
-      user_id: 1,
+      userId: 1,
       name: 'Name',
       surname: 'Surname',
       email: 'name.surname@hotmail.com',
@@ -15,7 +16,7 @@ export class UserService{
       age: 22,
     },
     {
-      user_id: 2,
+      userId: 2,
       name: 'Name_1',
       surname: 'Surname_1',
       email: 'name.surname_1@hotmail.com',
@@ -25,7 +26,7 @@ export class UserService{
       age: 24,
     },
     {
-      user_id: 3,
+      userId: 3,
       name: 'Name_3',
       surname: 'Surname_3',
       email: 'name.surname_3@hotmail.com',
@@ -35,7 +36,7 @@ export class UserService{
       age: 26,
     },
     {
-      user_id: 4,
+      userId: 4,
       name: 'Name_4',
       surname: 'Surname_4',
       email: 'name.surname_4@hotmail.com',
@@ -51,17 +52,17 @@ export class UserService{
     return this.users;
   }
 
-  deleteUser(user){
+  deleteUser(user: UserInterface) {
     const index = this.users.indexOf(user);
-    if(index >= 0){
+    if(index >= 0) {
       this.users.splice(index, 1);
     }
   }
 
-  updateUser(user){
-    const index = this.users.indexOf(user);
-    if(index >= 0){
-      this.users.splice(index, 1);
+  updateUser(user: UserInterface) {
+    const index = this.users.findIndex((value) => value.userId === user.userId);
+    if (index >= 0) {
+      this.users[index] = user;
     }
   }
 }
