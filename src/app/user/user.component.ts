@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {UserService} from '../users/user.service';
+import {UserService} from './user.service';
 
 @Component({
   selector: 'tr[app-user]',
