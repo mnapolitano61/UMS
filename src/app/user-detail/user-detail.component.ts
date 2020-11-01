@@ -10,14 +10,18 @@ import {UserService} from '../services/user.service';
 export class UserDetailComponent implements OnInit {
 
   @Input() user: User;
-  constructor(private userService: UserService) {}
+
+  constructor(private userService: UserService) {
+  }
 
   ngOnInit() {
   }
 
-  updateUser() {
-    if(this.user.userId > 0) {
+  saveUser() {
+    if (this.user.userId > 0) {
       this.userService.updateUser(this.user);
+    } else {
+      this.userService.createUser(this.user);
     }
   }
 

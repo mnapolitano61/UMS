@@ -15,4 +15,9 @@ export class AppComponent {
     this.showForm = true;
     this.userSelected = user;
   }
+
+  newUser() {
+    this.showForm = true;
+    this.userSelected = new User();
+  }
 }
