@@ -29,7 +29,6 @@
               "./node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": [
-              "./node_modules/@ng-bootstrap/ng-bootstrap"
             ]
           },
           "configurations": {
@@ -121,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "UMS"
+  "defaultProject": "UMS",
+  "cli": {
+    "analytics": "0739efe3-aeb1-4286-9ccc-abc1d9251a8e"
+  }
 }
