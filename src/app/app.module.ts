@@ -10,6 +10,9 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import {FormsModule} from '@angular/forms';
 import { UcfirstPipe } from './ucfirst.pipe';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NavComponent } from './nav/nav.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ModalBasicComponent } from './modal-basic/modal-basic.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,15 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     UsersComponent,
     UserComponent,
     UserDetailComponent,
-    UcfirstPipe
+    UcfirstPipe,
+    NavComponent,
+    ModalBasicComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
   ],
   providers: [
     UserService

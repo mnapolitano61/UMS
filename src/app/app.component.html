@@ -1,7 +1,7 @@
+<app-nav (onNewuser)="newUser()"></app-nav>
+<app-modal-basic></app-modal-basic>
 <div class="container-fluid">
-  <i class="fas fa-user"></i>
-  <h1> User Managment System</h1>
-  <button type="button" (click)="newUser()" class="btn btn-success">Crea Utente</button>
+  <h1><i class="fas fa-user"></i> User Managment System</h1>
   <div class="row">
     <div class="col-md-8">
       <app-users (updateUser)="updateUser($event)"></app-users>
