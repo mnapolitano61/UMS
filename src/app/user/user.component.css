@@ -1,6 +1,10 @@
-.buttons{
-  width:60px;
-}
 .buttons div{
   padding:0;
 }
+
+.buttons{
+  margin: 1%;
+  width: 15%;
+  text-align: center;
+}
+
