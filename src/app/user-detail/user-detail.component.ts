@@ -33,7 +33,9 @@ export class UserDetailComponent implements OnInit {
       (params) => {
         if(params.id){
           this.title = 'Modifica utente';
-          this.user = this.userService.getUserById(+params.id);
+          this.userService.getUserById(+param.id).subscribe(
+            response => this.user = response.data;
+        );
         }else{
           this.title = 'Crea utente';
         }
